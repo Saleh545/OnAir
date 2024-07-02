@@ -10,3 +10,41 @@ body {
     text-decoration: none;
     list-style: none;
 }
+
+.slick-dots {
+    @apply bottom-8;
+}
+
+.slick-dots li button {
+    background-color: rgba(217, 217, 217, 0.3);
+    width: 28px;
+    height: 4px !important;
+    padding: 0;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    height: 4px ;
+
+}
+
+.slick-dots li.slick-active {
+    opacity: .75;
+    background-color: rgb(217, 217, 217);
+    width: 28px;
+    height: 4px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: transparent;
+}
+
+
+
+.slick-dots li button:before {
+    color: transparent;
+}

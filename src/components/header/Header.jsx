@@ -91,7 +91,7 @@ const Header = () => {
     setOpen(!open);
   };
   return (
-    <div className="bg-[#111111!important] px-14 md:px-4 ">
+    <div className="bg-[#111111!important] px-3 xl:px-14 ">
       <div className="container w-full mx-auto">
         <header className="flex justify-between items-center pt-5 pb-4 w-full">
           <div className="left flex items-center">
@@ -101,7 +101,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className={open?"resp-bar flex  flex-col  absolute top-0  right-0 items-center content-center h-screen w-full  " :"resp-bar-close hidden  "}>
+            <div className={open?"resp-bar flex z-30  flex-col  absolute top-0  right-0 items-center content-center h-screen w-full  " :"resp-bar-close hidden  "}>
             <div className="nav-menu bg-[#111111!important] h-screen w-full absolute top-20 left-0 pl-[22px]">
               <div className="block md:hidden ">
                 <SearchAppBar />
@@ -140,7 +140,7 @@ const Header = () => {
                       Music
                     </button>
                     {isMusicMenuOpen && (
-                      <ul className="absolute bg-[#232229] lg:pl-4 lg:pr-4 pl-5 pr-5 mt-8 text-left rounded-xl">
+                      <ul className="absolute z-20 bg-[#232229] lg:pl-4 lg:pr-4 pl-5 pr-5 mt-8 text-left rounded-xl">
                         <li>
                           <Link className="hover:text-[#E90000] border-b block pr-14 text-white border-y-gray-700 py-2 text-[19px]">
                             Classical
@@ -245,7 +245,7 @@ const Header = () => {
                     Music
                   </button>
                   {isMusicMenuOpen && (
-                    <ul className="absolute bg-[#232229] lg:pl-4 lg:pr-4 pl-5 pr-5 mt-8 text-left rounded-xl">
+                    <ul className="absolute bg-[#232229] lg:pl-4 lg:pr-4 pl-5 pr-5 mt-8 text-left rounded-xl z-20">
                       <li>
                         <Link className="hover:text-[#E90000] border-b block pr-14 text-white border-y-gray-700 py-2 text-[19px]">
                           Classical
