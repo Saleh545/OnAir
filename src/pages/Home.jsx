@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import RecommendedChannels from "../components/RecommendedChannels";
 
 const Home = () => {
   let settings = {
@@ -50,6 +51,7 @@ const Home = () => {
         </div>
       </Slider>
     </div>
+    <RecommendedChannels/>
   </div>
   );
 };
@@ -77,4 +79,6 @@ const CustomPrevArrow = (props) => {
     </button>
   );
 };
+
+
 export default Home;
