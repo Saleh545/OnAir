@@ -5,6 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import RecommendedChannels from "../components/RecommendedChannels";
+import Movies from "../components/Movies";
+import Channel from "../components/Channel";
+import Popular from "../components/Popular";
+import Games from "../components/Games";
 
 const Home = () => {
   let settings = {
@@ -52,6 +56,10 @@ const Home = () => {
       </Slider>
     </div>
     <RecommendedChannels/>
+    <Channel/>
+    <Movies/>
+    <Popular/>
+    <Games/>
   </div>
   );
 };
@@ -60,7 +68,7 @@ const CustomNextArrow = (props) => {
   const { onClick } = props;
   return (
     <button
-      className="absolute bottom-4 ml-20 left-1/2 transform -translate-x-0 z-20 bg-transparent text-white border flex rounded-full w-10 h-10 items-center justify-center"
+      className="absolute bottom-4 hover:bg-white hover:text-black ml-20 left-1/2 transform -translate-x-0 z-20 bg-transparent text-white border flex rounded-full w-10 h-10 items-center justify-center"
       onClick={onClick}
     >
       <GrNext />
@@ -72,7 +80,7 @@ const CustomPrevArrow = (props) => {
   const { onClick } = props;
   return (
     <button
-      className="absolute mr-20 bottom-4 right-1/2 transform translate-x-0 z-20 bg-transparent text-white border flex rounded-full w-10 h-10  items-center justify-center"
+      className="absolute mr-20 bottom-4 right-1/2 transform translate-x-0 z-20 bg-transparent text-white border hover:bg-white hover:text-black flex rounded-full w-10 h-10  items-center justify-center"
       onClick={onClick}
     >
       <GrPrevious />
