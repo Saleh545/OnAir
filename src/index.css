@@ -11,7 +11,7 @@ body {
     list-style: none;
     overflow-x: hidden;
     backdrop-filter: blur(30px) ;
-    /* background: rgb(35 30 30); */
+    background: rgb(35 30 30);
 }
 
 .slick-dots {
@@ -72,3 +72,60 @@ body {
     margin-right: -20px;
     overflow: visible;
 }
+footer a:hover{
+    color: white;
+}
+
+.label-container {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 2px solid rgb(109, 109, 109);
+    background: rgb(48, 48, 48);
+  }
+  
+  .label-container input:checked ~ .checkmark {
+    background-color: #E13C52;
+    border: 2px solid transparent;
+  }
+  
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .label-container input:checked ~ .checkmark::after {
+    display: block;
+  }
+  
+  .label-container .checkmark::after {
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  

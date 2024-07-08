@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/header/Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +9,7 @@ import Channel from "../components/Channel";
 import Popular from "../components/Popular";
 import Games from "../components/Games";
 import Footer from "../components/Footer";
-
+import Header from "../components/Header";
 const Home = () => {
   let settings = {
     dots: true,
@@ -23,7 +22,7 @@ const Home = () => {
   };
   return (
     <>
-    <Header />
+<Header/>
     <div className="relative  bg-black">
       <Slider {...settings}>
         <div className="relative">
