@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import onair from "../assets/onair.svg";
+import avatar from "../assets/avatar.svg";
 import { Link } from "react-router-dom";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -204,7 +205,7 @@ const Header = () => {
               <Link to="/login" className="flex block md:hidden items-center text-white gap-2 pl-[16px] inline-block">
                 <img
                   className="max-w-full"
-                  src="./src/assets/avatar.svg"
+                  src={avatar}
                   alt="Avatar"
                 />
                 Sign in
@@ -318,7 +319,7 @@ const Header = () => {
             <Link to="/login" className=" hidden md:flex items-center text-white gap-2 inline-block">
               <img
                 className="max-w-full"
-                src="./src/assets/avatar.svg"
+                src={avatar}
                 alt="Avatar"
               />
               Sign in
