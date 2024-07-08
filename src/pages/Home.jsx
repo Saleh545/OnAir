@@ -10,6 +10,8 @@ import Popular from "../components/Popular";
 import Games from "../components/Games";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import homebck from "../assets/homeBck.svg";
+
 const Home = () => {
   let settings = {
     dots: true,
@@ -26,28 +28,28 @@ const Home = () => {
     <div className="relative  bg-black">
       <Slider {...settings}>
         <div className="relative">
-          <img src="./src/assets/homeBck.svg" alt="" className="z-10" />
+          <img src={homebck} alt="" className="z-10" />
           <div className="absolute inset-0 flex justify-center items-center flex-col w-[35%] font-light ">
             <h2 className="z-40 text-white text-center text-5xl">Dive into a <span className="font-bold">universe</span> of un-ending content and channels</h2>
           <p className="text-white px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full bg-[#E13C52] mt-[70px] hover:bg-[#f46174] ">Start FREE trial</p>
           </div>
         </div>
         <div className="relative">
-          <img src="./src/assets/homeBck.svg" alt="" className="z-10" />
+          <img src={homebck} alt="" className="z-10" />
           <div className="absolute inset-0 flex justify-center items-center flex-col w-[35%] font-light ">
             <h2 className="z-40 text-white text-center text-5xl">Dive into a <span className="font-bold">universe</span> of un-ending content and channels</h2>
           <p className="text-white px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full bg-[#E13C52] mt-[70px] hover:bg-[#f46174] ">Start FREE trial</p>
           </div>
         </div>
         <div className="relative">
-          <img src="./src/assets/homeBck.svg" alt="" className="z-10" />
+          <img src={homebck} alt="" className="z-10" />
           <div className="absolute inset-0 flex justify-center items-center flex-col w-[35%] font-light ">
             <h2 className="z-40 text-white text-center text-5xl">Dive into a <span className="font-bold">universe</span> of un-ending content and channels</h2>
           <p className="text-white px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full bg-[#E13C52] mt-[70px] hover:bg-[#f46174] ">Start FREE trial</p>
           </div>
         </div>
         <div className="relative">
-          <img src="./src/assets/homeBck.svg" alt="" className="z-10" />
+          <img src={homebck} alt="" className="z-10" />
           <div className="absolute inset-0 flex justify-center items-center flex-col w-[35%] font-light ">
             <h2 className="z-40 text-white text-center text-5xl">Dive into a <span className="font-bold">universe</span> of un-ending content and channels</h2>
           <p className="text-white px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full bg-[#E13C52] mt-[70px] hover:bg-[#f46174] ">Start FREE trial</p>
