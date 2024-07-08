@@ -201,7 +201,7 @@ const Header = () => {
                   </l>
                 </ul>
               </nav>
-              <Link className="flex block md:hidden items-center text-white gap-2 pl-[16px] inline-block">
+              <Link to="/login" className="flex block md:hidden items-center text-white gap-2 pl-[16px] inline-block">
                 <img
                   className="max-w-full"
                   src="./src/assets/avatar.svg"
@@ -315,7 +315,7 @@ const Header = () => {
               <Hamburger toggled={open}  toggle={toggleMenu} />
             </div>
 
-            <Link className=" hidden md:flex items-center text-white gap-2 inline-block">
+            <Link to="/login" className=" hidden md:flex items-center text-white gap-2 inline-block">
               <img
                 className="max-w-full"
                 src="./src/assets/avatar.svg"

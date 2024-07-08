@@ -38,7 +38,7 @@ const RecommendedChannels = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="mt-[69px] relative z-0">
         <div className="container xl:px-14 px-3 relative">
           <h2 className="text-[32px] font-normal leading-9 text-white   inline ">
@@ -170,7 +170,7 @@ const RecommendedChannels = () => {
       </div>
 
     
-    </div>
+    </>
   );
 };
 

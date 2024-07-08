@@ -37,7 +37,7 @@ const Movies = () => {
         ],
       };
   return (
-    <div>
+    <>
              <div className=" relative z-0">
         <div className="container  xl:px-14 px-3 relative">
           <h2 className="text-[32px] font-normal leading-9 text-white flex   inline ">
@@ -91,7 +91,7 @@ const Movies = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
