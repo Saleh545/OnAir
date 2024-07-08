@@ -23,7 +23,7 @@ const Home = () => {
     prevArrow: <CustomPrevArrow />,
   };
   return (
-    <>
+    <div>
 <Header/>
     <div className="relative  bg-black">
       <Slider {...settings}>
@@ -63,7 +63,7 @@ const Home = () => {
     <Popular/>
     <Games/>
     <Footer/>
-  </>
+  </div>
   );
 };
 
