@@ -3,6 +3,10 @@ import { FaFacebookSquare, FaTwitter } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { TiSocialInstagram } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import footerlogo from "../assets/footer-logo.svg";
+import store from "../assets/store.svg";
+import play from "../assets/play.svg";
+
 
 const Footer = () => {
   return (
@@ -12,7 +16,7 @@ const Footer = () => {
           <div className="left w-[26%]">
             <div className="logo mt-[10px]">
               <Link to="/">
-                <img src="./src/assets/footer-logo.svg" alt="" />
+                <img src={footerlogo} alt="" />
               </Link>
             </div>
             <div className="footer-text mt-[95px]">
@@ -23,10 +27,10 @@ const Footer = () => {
             </div>
             <div className="app flex my-[32px] gap-[20px]">
               <Link>
-                <img src="./src/assets/store.svg" alt="" />
+                <img src={store} alt="" />
               </Link>
               <Link>
-                <img src="./src/assets/play.svg" alt="" />
+                <img src={play} alt="" />
               </Link>
             </div>
             <div className="social flex items-center gap-[40px] mb-[54px]">
