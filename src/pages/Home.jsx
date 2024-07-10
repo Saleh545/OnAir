@@ -25,9 +25,9 @@ const Home = () => {
   return (
     <div>
 <Header/>
-    <div className="relative  bg-black">
+    <div className="relative  ">
       <Slider {...settings}>
-        <div className="relative">
+        <div className="relative"  >
           <img src={homebck} alt="" className="z-10" />
           <div className="absolute inset-0 flex justify-center items-center flex-col w-[35%] font-light ">
             <h2 className="z-40 text-white text-center text-5xl">Dive into a <span className="font-bold">universe</span> of un-ending content and channels</h2>
