@@ -70,8 +70,67 @@ const MoviePage = () => {
       <div className="slider-container relative bg-cover pb-[150px] bg-center" style={{ backgroundImage: `url(${moviebck2})` }}>
             <Slider {...settingss}>
               <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
-
                 <img src={new1} alt="" className="rounded-[4px] w-full h-screencard-img "/>
+                <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
+                  <div className="p-4 text-white">
+                    <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
+                    <p>6 Seasons  |   13 Episodes</p>
+                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                      Watch Now
+                    </Link>
+                  </div>
+                </div>
+              </div>                              
+              <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
+                <img src={new2} alt="" className="rounded-[4px] w-full h-screencard-img "/>
+                <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
+                  <div className="p-4 text-white">
+                    <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
+                    <p>6 Seasons  |   13 Episodes</p>
+                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                      Watch Now
+                    </Link>
+                  </div>
+                </div>
+              </div>                              
+              <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
+                <img src={new3} alt="" className="rounded-[4px] w-full h-screencard-img "/>
+                <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
+                  <div className="p-4 text-white">
+                    <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
+                    <p>6 Seasons  |   13 Episodes</p>
+                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                      Watch Now
+                    </Link>
+                  </div>
+                </div>
+              </div>                              
+              <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
+                <img src={new4} alt="" className="rounded-[4px] w-full h-screencard-img "/>
+                <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
+                  <div className="p-4 text-white">
+                    <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
+                    <p>6 Seasons  |   13 Episodes</p>
+                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                      Watch Now
+                    </Link>
+                  </div>
+                </div>
+              </div>                              
+              <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
+                <img src={new5} alt="" className="rounded-[4px] w-full h-screencard-img "/>
+                <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
+                  <div className="p-4 text-white">
+                    <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
+                    <p>6 Seasons  |   13 Episodes</p>
+                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                      Watch Now
+                    </Link>
+                  </div>
+                </div>
+              </div>                              
+              <div className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30">
+                <img src={new6} alt="" className="rounded-[4px] w-full h-screencard-img "/>
                 <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100  transition-opacity duration-300 z-40">
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
