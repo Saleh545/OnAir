@@ -128,6 +128,12 @@ footer a:hover{
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
+  .css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root{
+    background-color: #191919 !important;
+  }
+  .css-i4bv87-MuiSvgIcon-root{
+    color: white;
+  }
   @media (max-width: 768px) {
     .slick-dots {
       display: none !important;

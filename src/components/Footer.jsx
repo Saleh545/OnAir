@@ -20,22 +20,22 @@ const Footer = () => {
     <>
       <footer className="bg-[#191919] pt-[60px] flex pb-[32px]">
         <div className="container xl:px-14 px-3 block lg:flex justify-between md:block sm:block">
-        <div className="  xl:hidden  md:hidden  sm:block ">
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel1-content"id="panel1-header">
+        <div className="  xl:hidden  md:hidden  sm:block bg-[#191919]">
+      <Accordion className="bg-[#191919]">
+        <AccordionSummary className="bg-[#191919]"  expandIcon={<ExpandMoreIcon />}aria-controls="panel1-content"id="panel1-header">
         <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className="bg-[#191919]">
         <Link className="text-[#797979] block mb-3"> Personal data</Link>
               <Link className="text-[#797979] block mb-3">Choosing a Plan</Link>
               <Link className="text-[#797979] block mb">Payment</Link>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel2-content"id="panel2-header">
+      <Accordion className="bg-[#191919]">
+        <AccordionSummary className="bg-[#191919]" expandIcon={<ExpandMoreIcon />}aria-controls="panel2-content"id="panel2-header">
         <h4 className="flex text-white mb-[22px] gap-[6.5px]">Movies</h4>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className="bg-[#191919]">
         <Link className="text-[#797979] block mb-3">Lock Upp</Link>
               <Link className="text-[#797979] block mb-3">Pavitra Rishta</Link>
               <Link className="text-[#797979] block mb-3">Girgit</Link>
@@ -46,11 +46,11 @@ const Footer = () => {
               <Link className="text-[#797979] block ">Broken But Beautiful Season 3</Link>
         </AccordionDetails>
       </Accordion>
-      <Accordion >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel3-content"id="panel3-header">
+      <Accordion className="bg-[#191919]" >
+        <AccordionSummary className="bg-[#191919]" expandIcon={<ExpandMoreIcon />}aria-controls="panel3-content"id="panel3-header">
         <h4 className="flex text-white mb-[22px] gap-[6.5px]">Series</h4>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className="bg-[#191919]">
         <Link className="text-[#797979] block mb-3">X.X.X. Season 2</Link>
               <Link className="text-[#797979] block mb-3">Gandii Baat Season 5</Link>
               <Link className="text-[#797979] block mb-3">Gandii Baat Season 6</Link>
