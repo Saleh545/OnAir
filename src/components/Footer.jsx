@@ -6,14 +6,63 @@ import { Link } from "react-router-dom";
 import footerlogo from "../assets/footer-logo.svg";
 import store from "../assets/store.svg";
 import play from "../assets/play.svg";
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+
 
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-[#191919] pt-[60px] flex pb-[32px]">
-        <div className="container xl:px-14 px-3 flex justify-between">
-          <div className="left w-[26%]">
+        <div className="container xl:px-14 px-3 block lg:flex justify-between md:block sm:block">
+        <div className="  xl:hidden  md:hidden  sm:block ">
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel1-content"id="panel1-header">
+        <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Link className="text-[#797979] block mb-3"> Personal data</Link>
+              <Link className="text-[#797979] block mb-3">Choosing a Plan</Link>
+              <Link className="text-[#797979] block mb">Payment</Link>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel2-content"id="panel2-header">
+        <h4 className="flex text-white mb-[22px] gap-[6.5px]">Movies</h4>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Link className="text-[#797979] block mb-3">Lock Upp</Link>
+              <Link className="text-[#797979] block mb-3">Pavitra Rishta</Link>
+              <Link className="text-[#797979] block mb-3">Girgit</Link>
+              <Link className="text-[#797979] block mb-3">Hai Taubba Season 3</Link>
+              <Link className="text-[#797979] block mb-3">Cartel</Link>
+              <Link className="text-[#797979] block mb-3">Crimes And Confessions</Link>
+              <Link className="text-[#797979] block mb-3">Puncch Beat Season 2</Link>
+              <Link className="text-[#797979] block ">Broken But Beautiful Season 3</Link>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion >
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel3-content"id="panel3-header">
+        <h4 className="flex text-white mb-[22px] gap-[6.5px]">Series</h4>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Link className="text-[#797979] block mb-3">X.X.X. Season 2</Link>
+              <Link className="text-[#797979] block mb-3">Gandii Baat Season 5</Link>
+              <Link className="text-[#797979] block mb-3">Gandii Baat Season 6</Link>
+              <Link className="text-[#797979] block mb-3">Broken But Beautiful Season 1</Link>
+              <Link className="text-[#797979] block mb-3">Broken But Beautiful Season 2</Link>
+              <Link className="text-[#797979] block mb-3">Class Of 2020</Link>
+              <Link className="text-[#797979] block mb-3">Bekaaboo Season 1</Link>
+              <Link className="text-[#797979] block ">Ragini MMS Returns Season 2</Link>
+        </AccordionDetails>
+      </Accordion>
+    </div>
+          <div className="left lg:w-[26%] w-full">
             <div className="logo mt-[10px]">
               <Link to="/">
                 <img src={footerlogo} alt="" />
@@ -59,12 +108,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="right flex gap-[190px]">
+          <div className="right flex gap-[190px]  lg:flex md:flex hidden ">
             <div className="card-footer">
-              <h4 className="flex text-white mb-[22px] gap-[6.5px]">
-                <img src="./src/assets/avatar.svg" alt="" />
-                Sign in
-              </h4>
+              <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
               <Link className="text-[#797979] block mb-3"> Personal data</Link>
               <Link className="text-[#797979] block mb-3">Choosing a Plan</Link>
               <Link className="text-[#797979] block mb">Payment</Link>
@@ -96,6 +142,10 @@ const Footer = () => {
 
             </div>
           </div>
+
+
+        
+
         </div>
       </footer>
     </>
