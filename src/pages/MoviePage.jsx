@@ -75,7 +75,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
@@ -87,7 +87,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
@@ -99,7 +99,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
@@ -111,7 +111,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
@@ -123,7 +123,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
@@ -135,7 +135,7 @@ const MoviePage = () => {
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">Charlie’s Angels</h2>
                     <p>6 Seasons  |   13 Episodes</p>
-                    <Link to="series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
+                    <Link to="/series" className="text-white mt-[23px] inline-block cursor-pointer font-medium py-[10px] px-[34px] rounded-full bg-[#E13C52] hover:bg-[#f46174]">
                       Watch Now
                     </Link>
                   </div>
