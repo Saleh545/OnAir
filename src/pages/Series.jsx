@@ -16,7 +16,6 @@ const Series = () => {
     const handleChange = (event) => {
       setSelectedSeason(event.target.value);
     };
-
   return (
     <div>
       <Header />

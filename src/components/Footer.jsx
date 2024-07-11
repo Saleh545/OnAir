@@ -7,11 +7,9 @@ import footerlogo from "../assets/footer-logo.svg";
 import store from "../assets/store.svg";
 import play from "../assets/play.svg";
 import Accordion from '@mui/material/Accordion';
-import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Button from '@mui/material/Button';
 
 
 
@@ -62,7 +60,7 @@ const Footer = () => {
         </AccordionDetails>
       </Accordion>
     </div>
-          <div className="left lg:w-[26%] w-full">
+          <div className="left lg:w-[26%]  w-full ">
             <div className="logo mt-[10px]">
               <Link to="/">
                 <img src={footerlogo} alt="" />
@@ -108,7 +106,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="right flex gap-[190px]  lg:flex md:flex hidden ">
+          <div className="right flex gap-[190px] md:mt-6   lg:flex md:flex hidden ">
             <div className="card-footer">
               <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
               <Link className="text-[#797979] block mb-3"> Personal data</Link>

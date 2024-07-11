@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     backdrop-filter: blur(30px) ;
     background: rgb(35 30 30);
 }
@@ -130,6 +130,8 @@ footer a:hover{
   }
   .css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root{
     background-color: #191919 !important;
+    outline: none !important;
+    border: none  !important;
   }
   .css-i4bv87-MuiSvgIcon-root{
     color: white;
@@ -140,3 +142,6 @@ footer a:hover{
     }
   }
   
+  .profile-left .active{
+    background-color: #E13C52;
+  }
