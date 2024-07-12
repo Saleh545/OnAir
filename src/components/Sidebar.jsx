@@ -26,17 +26,17 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="min-h-screen  flex" >
+      <div className="min-h-screen  flex border-r border-[#616161]" >
         <div className="container xl:px-14 px-3">
           <div className="left  mt-[28px]  inline-flex flex-col justify-center">
             <div className="person flex flex-col items-center">
               <img src={personImage}alt="Person"className="inline object-cover max-w-[140px] rounded-full max-h-[140px]"style={{ objectFit: "cover", width: "140px", height: "140px" }}/>
               <p className="text-[#929090] mt-[10px]">Syusifzade545@gmail.com</p>
-              <div className="bg-[#E13C52] mt-[22px] mb-[30px] hover:bg-[#e26374] inline-block p-[16px] cursor-pointer rounded-full"onClick={() => document.getElementById('fileInput').click()}>
+              <div className="bg-[#E13C52] mt-[22px] mb-[22px] hover:bg-[#e26374] inline-block p-[16px] cursor-pointer rounded-full"onClick={() => document.getElementById('fileInput').click()}>
                 <FaPencil className="text-white" />
               </div>
               <input id="fileInput"type="file"accept="image/*"style={{ display: 'none' }}onChange={handleImageChange}/>
-              <p className="text-[#8D8D8D]">Your subscriptions are valid until</p>
+              <p className="text-[#8D8D8D] text-center">Your subscriptions are valid until</p>
               <p className="text-[18px] font-[700] text-white">02.08.2003</p>
             </div>
             <div className="mt-[20px] profile-left">
