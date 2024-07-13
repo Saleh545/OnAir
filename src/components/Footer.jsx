@@ -110,8 +110,8 @@ const Footer = () => {
             <div className="card-footer">
               <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
               <Link className="text-[#797979] block mb-3"> Personal data</Link>
-              <Link className="text-[#797979] block mb-3">Choosing a Plan</Link>
-              <Link className="text-[#797979] block mb">Payment</Link>
+              <Link to="/plans" className="text-[#797979] block mb-3">Choosing a Plan</Link>
+              <Link to="/payments" className="text-[#797979] block mb">Payment</Link>
             </div>
 
             <div className="card-footer">
