@@ -15,9 +15,9 @@ const Profile = () => {
         <Sidebar/>
         
      
-        <div className="ml-[50px] mt-[28px] w-full ">
+        <div className="ml-[50px] mt-[28px] w-full  min-h-screen">
           <div className="container xl:px-14 px-3">
-          <h2 className='items-center gap-[24px] flex text-[32px] text-white'><img src={avatar} alt="" />Profile</h2>
+          <h2 className='items-center gap-[24px] flex text-[32px] text-white font-bold'><img src={avatar} alt="" />Profile</h2>
           <form action="" className='mt-[32px]'>
             <input type="email" placeholder="Please enter Email address" className=" mb-[14px] block w-[350px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
             <input type="password" placeholder="Please enter Password" className="block w-[350px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
