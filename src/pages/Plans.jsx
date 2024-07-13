@@ -72,7 +72,6 @@ const Plans = () => {
                 </div>
               ))}
             </div>
-
             <div className="my-[35px] overflow-hidden  bg-[#000000] rounded-[20px] pt-[14px] pb-[30px] pl-[38px] ">
               <div>
                 <h5 className="text-[26px] text-white">Upgrade your service</h5>
@@ -85,14 +84,14 @@ const Plans = () => {
                     </div>
                   ))}
                 </div>
-                <div className="mt-[28px] w-[200px]">
-                <img src={freemium} alt="" />
-                </div>
               </div>
 
               <div className="flex justify-end  ">
                 {selectedPlan && (
                   <div className="plan-details w-full   text-white mt-4 rounded-lg ">
+                       <div className="mt-[28px] w-[200px]">
+                <img src={freemium} alt="" />
+                </div>
                     <p className="text-[26px]">Watch {selectedPlan.channels}   live TV channels</p>
                     <p className="text-20px text-[#FFFFFF8A]">{selectedPlan.description}</p>
                   <div className="flex items-center mt-[20px] ">

@@ -255,17 +255,9 @@ const RecommendedChannels = () => {
                   </p>
                 </div>
               </div>
-          
-           
-             
             </Slider>
           </div>
-
-
-          <div className="text-right pt-[50px]">
-            <button className="p-[5px_52px] text-white bg-black text-[27px] border border-custom-gray hover:bg-white hover:text-black" >Ad Banner</button>
           </div>
-        </div>
       </div>
 
     
