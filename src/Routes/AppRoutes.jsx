@@ -9,6 +9,7 @@ import Profile from "../pages/Profile";
 import Plans from "../pages/Plans";
 import Payments from "../pages/Payments";
 import MovieDetail from "../components/MovieDetail";
+import AllMovies from "../pages/AllMovies";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,8 @@ const AppRoutes = () => {
         <Route path="/plans" element={< Plans />}/>
         <Route path="/payments" element={< Payments />}/>
         <Route path="/movie/:imdbID" element={<MovieDetail/>} />
+        <Route path="/all-movies"  element={<AllMovies/>} />
+
       </Routes>
     </>
   );

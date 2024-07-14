@@ -63,7 +63,7 @@ const Channel = () => {
       <div className="container xl:px-14 px-3 relative">
         <h2 className="text-[32px] font-normal leading-9 text-white flex inline">
           New Channels 
-          <Link className="underline hover:no-underline text-[16px] ml-[63px] flex items-center gap-[26px]">
+          <Link to="/all-movies" className="underline hover:no-underline text-[16px] ml-[63px] flex items-center gap-[26px]">
             View all <FaAngleRight />
           </Link>
         </h2>
