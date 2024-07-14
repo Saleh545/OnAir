@@ -57,7 +57,7 @@ const MovieDetail = () => {
         <p className="text-white my-[14px] font-bold">Director: <span className="text-[#A1A1AA]">{movie.Director}</span></p>
         <p className="text-white font-bold">Actors: <span className="text-[#A1A1AA]">{movie.Actors}</span></p>
         <p className="text-white font-bold my-[14px]">Genre: <span className="text-[#A1A1AA]">{movie.Genre}</span></p>
-        <p className="text-white font-bold flex items-center text-yellow-400 gap-3">IMDB Rating: <SiImdb className="w-[30px] h-[30px] " /> {movie.imdbRating}</p>
+        <p className="text-white font-bold flex items-center text-yellow-400 gap-3"> <SiImdb className="w-[30px] h-[30px] " /> Rating:  {movie.imdbRating}</p>
         </div>
     </div>
 
