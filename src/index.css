@@ -192,6 +192,9 @@ footer a:hover{
     -o-transition: .6s;
     transition: .6s;
 }
+#preloader-active{
+  overflow: hidden !important;
+}
 .preloader .preloader-img {
     position: absolute;
     top: 50%;

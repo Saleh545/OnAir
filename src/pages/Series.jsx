@@ -10,6 +10,7 @@ import season4 from "../assets/season4.svg";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Spinner from "../components/Spinner";
 
 const Series = () => {
     const [selectedSeason, setSelectedSeason] = useState("Season 1");
@@ -18,6 +19,8 @@ const Series = () => {
     };
   return (
     <div>
+            <Spinner/>
+
       <Header />
       <div className="min-h-screen flex flex-col justify-end bg-cover bg-center" style={{ backgroundImage: `url(${moviebck})` }}>
         <div className="container xl:px-14 px-3">

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Spinner from "../components/Spinner";
+
 
 const AllMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -32,6 +34,7 @@ const AllMovies = () => {
 
   return (
     <div>
+      <Spinner/>
       <Header />
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {movies.map((movie, index) => (

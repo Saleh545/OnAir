@@ -9,7 +9,7 @@ const Spinner = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); 
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,11 +17,11 @@ const Spinner = () => {
   return (
     <>
       {isLoading && (
-        <div id="preloader-active  ">
-          <div className="preloader bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>
-            <div className="preloader-inner ">
-              <div className="preloader-circle"></div>
-              <div className="preloader-img pere-text"><img src={onair} alt=""/>
+        <div id="preloader-active over" className="overflow-hidden">
+          <div className="preloader bg-center bg-cover overflow-hidden" style={{ backgroundImage: `url(${moviebck})` }}>
+            <div className="preloader-inner overflow-hidden">
+              <div className="preloader-circle overflow-hidden"></div>
+              <div className="preloader-img overflow-hidden pere-text"><img src={onair} alt=""/>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const SignUp = () => {
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
@@ -10,6 +11,8 @@ const SignUp = () => {
 
   return (
     <>
+          <Spinner/>
+
       <div className="w-full min-h-screen flex items-center justify-center flex-col"style={{backgroundImage: "url('./src/assets/login.svg')",backgroundPosition: "center",}}>
         <div className="container max-w-screen-lg mx-auto flex items-center justify-center my-[40px] flex-col">
           <div className="logo flex justify-center mb-6">

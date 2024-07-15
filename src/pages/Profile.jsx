@@ -4,11 +4,14 @@ import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import moviebck from "../assets/moviebck.svg";
 import avatar from "../assets/avatar.svg";
+import Spinner from '../components/Spinner';
 
 
 const Profile = () => {
   return (
     <div>
+            <Spinner/>
+
         <Header/>
 
     <div className="flex bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>

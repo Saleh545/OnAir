@@ -8,6 +8,7 @@ import moviebck from "../assets/moviebck.svg";
 import { CiStar } from "react-icons/ci";
 import { IoMdShare } from "react-icons/io";
 import Popular from "./Popular";
+import Spinner from "./Spinner";
 
 
 const API_URL = (imdbID) => {
@@ -17,6 +18,7 @@ const API_URL = (imdbID) => {
 const MovieDetail = () => {
   const { imdbID } = useParams();
   const [movie, setMovie] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -29,14 +31,16 @@ const MovieDetail = () => {
         setMovie(data);
       } catch (error) {
         console.error("Error fetching movie details:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchMovieDetail();
   }, [imdbID]);
 
-  if (!movie) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return <Spinner />;
   }
 
   return (
@@ -46,15 +50,17 @@ const MovieDetail = () => {
 
       <div className="container xl:px-14 px-3 ">
         <div className="pt-[20px]">
-          <h2 className="text-[32px] text-white font-bold">{movie.Title} <span className="text-[#A1A1AA] font-light text-[24px]">({movie.Year})</span></h2>
+          <h2 className="text-[32px] text-white font-bold text-center lg:text-left">{movie.Title} <span className="text-[#A1A1AA] font-light text-[24px]">({movie.Year})</span></h2>
         </div>
-<div className="flex justify-between  mt-7 ">
-    <div className="flex gap-5">
+<div className="  block lg:flex justify-between  mt-7 ">
+    <div className="block lg:flex items-center justify-center gap-5">
+      <div className=" flex items-center justify-center w-full lg:w-[33%] ">
         <img src={movie.Poster} alt={movie.Title} className="rounded-xl" />
+      </div>
 
-        <div className="">
+        <div className="my-5">
        <h4 className="text-white  text-[24px]">{movie.Title} Movie Information</h4>
-        <p className="text-[#D4D4D8] font-bold mt-[32px] text-[24px] w-[50%]">{movie.Plot}</p>
+        <p className="text-[#D4D4D8] font-bold mt-[32px] text-[24px] w-full lg:w-[50%] ">{movie.Plot}</p>
         <p className="text-white my-[14px] font-bold">Director: <span className="text-[#A1A1AA]">{movie.Director}</span></p>
         <p className="text-white font-bold">Actors: <span className="text-[#A1A1AA]">{movie.Actors}</span></p>
         <p className="text-white font-bold my-[14px]">Genre: <span className="text-[#A1A1AA]">{movie.Genre}</span></p>
@@ -63,18 +69,18 @@ const MovieDetail = () => {
     </div>
 
     <div className="  ">
-        <div className="flex gap-4">
+        <div className="block lg:flex gap-4">
                 <p className="text-white hover:bg-[#323235] cursor-pointer text-center py-[8px] px-[16px] bg-[#18181B] rounded-[8px] flex flex-col items-center  "><FaEyeSlash className="w-[24px] h-[24px] "/>Unwatch</p>
-                <p className="text-white hover:bg-[#323235] cursor-pointer   text-center py-[8px] px-[16px] bg-[#18181B] rounded-[8px] flex flex-col items-center "><FaPlus className="w-[24px] h-[24px] "/>Follow</p>
+                <p className="text-white mt-3 lg:mt-0 hover:bg-[#323235] cursor-pointer   text-center py-[8px] px-[16px] bg-[#18181B] rounded-[8px] flex flex-col items-center "><FaPlus className="w-[24px] h-[24px] "/>Follow</p>
         </div>
         <div className=" mt-[20px]  ">
             <h3 className="text-white ">Rate this film!</h3>
             <div className="flex justify-center gap-3 bg-[#18181B] py-[16px] inline px-[8px] rounded-xl  mt-[20px]">
-        <FaStar className="hover:text-yellow-400 cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 cursor-pointer w-6 h-6"/>
+        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
+        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
+        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
+        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
+        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
 
             </div>
 
