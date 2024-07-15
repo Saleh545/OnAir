@@ -7,6 +7,7 @@ import { SiImdb } from "react-icons/si";
 import moviebck from "../assets/moviebck.svg";
 import { CiStar } from "react-icons/ci";
 import { IoMdShare } from "react-icons/io";
+import Popular from "./Popular";
 
 
 const API_URL = (imdbID) => {
@@ -97,6 +98,8 @@ const MovieDetail = () => {
 <div className="my-[40px] flex flex-col items-center">
 <iframe className="rounded-[15px]" width="999" height="615" src="https://www.youtube.com/embed/TyskcLbCkqE?si=a7uq3EeZVaYDfL0d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+<Popular/>
       </div>
       <Footer />
     </div>

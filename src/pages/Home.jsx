@@ -11,6 +11,7 @@ import Games from "../components/Games";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import homebck from "../assets/homeBck.svg";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   let settings = {
@@ -24,6 +25,7 @@ const Home = () => {
   };
   return (
     <div>
+      <Spinner/>
 <Header/>
     <div className="relative  ">
       <Slider {...settings}>
