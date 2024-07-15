@@ -101,11 +101,11 @@ const MovieDetail = () => {
         
 </div>
 
-<div className="my-[40px] flex flex-col items-center">
-<iframe className="rounded-[15px]" width="999" height="615" src="https://www.youtube.com/embed/TyskcLbCkqE?si=a7uq3EeZVaYDfL0d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div className="my-[40px] flex flex-col items-center w-full">
+<iframe className="rounded-[15px] w-full h-[80vh] "   src="https://www.youtube.com/embed/TyskcLbCkqE?si=a7uq3EeZVaYDfL0d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<Popular/>
+{/* <Popular/> */}
       </div>
       <Footer />
     </div>
