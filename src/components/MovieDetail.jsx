@@ -53,10 +53,10 @@ const MovieDetail = () => {
           <h2 className="text-[32px] text-white font-bold text-center lg:text-left">{movie.Title} <span className="text-[#A1A1AA] font-light text-[24px]">({movie.Year})</span></h2>
         </div>
 <div className="  block lg:flex justify-between  mt-7 ">
-    <div className="block lg:flex items-center justify-center gap-5">
-      <div className=" flex items-center justify-center w-full lg:w-[33%] ">
-        <img src={movie.Poster} alt={movie.Title} className="rounded-xl" />
-      </div>
+    <div className="block lg:flex items-center justify-center gap-7 ">
+    <div className="flex items-center justify-center w-full lg:w-[33%]">
+              <img src={movie.Poster} alt={movie.Title} className="rounded-xl max-w-full lg:max-w-none" />
+            </div>
 
         <div className="my-5">
        <h4 className="text-white  text-[24px]">{movie.Title} Movie Information</h4>
