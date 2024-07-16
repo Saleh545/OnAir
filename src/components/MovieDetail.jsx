@@ -54,8 +54,8 @@ const MovieDetail = () => {
         </div>
 <div className="  block lg:flex justify-between  mt-7 ">
     <div className="block lg:flex items-center justify-center gap-7 ">
-    <div className="flex items-center justify-center w-full lg:w-[33%]">
-              <img src={movie.Poster} alt={movie.Title} className="rounded-xl max-w-full lg:max-w-none" />
+    <div className="flex items-center justify-center w-full h-full lg:w-[33%]">
+              <img src={movie.Poster} alt={movie.Title} className="rounded-xl max-w-full  h-full lg:max-w-none" />
             </div>
 
         <div className="my-5">
@@ -105,7 +105,7 @@ const MovieDetail = () => {
 <iframe className="rounded-[15px] w-full h-[80vh] "   src="https://www.youtube.com/embed/TyskcLbCkqE?si=a7uq3EeZVaYDfL0d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-{/* <Popular/> */}
+<Popular/>
       </div>
       <Footer />
     </div>

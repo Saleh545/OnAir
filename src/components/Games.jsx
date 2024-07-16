@@ -26,6 +26,9 @@ const Games = () => {
 
     fetchMovies();
   }, []);
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   const settings = {
     dots: false,

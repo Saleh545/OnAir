@@ -1,9 +1,9 @@
+// AllMovies.js
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Spinner from "../components/Spinner";
-
 
 const AllMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -36,21 +36,19 @@ const AllMovies = () => {
     <div>
       <Spinner/>
       <Header />
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {movies.map((movie, index) => (
-          <div key={index} className="border border-gray-300 rounded p-4">
-            <img
-              src={movie.Poster}
-              alt={movie.Title}
-              className="rounded-lg mb-2"
-            />
-            <h2 className="text-lg font-medium">{movie.Title}</h2>
-            <p className="text-sm text-gray-500">{movie.Year}</p>
-            <Link to={`/movie/${movie.imdbID}`} className="text-blue-500 block mt-2 hover:underline">
-              View Details
-            </Link>
-          </div>
-        ))}
+      <div className="container xl:px-14 px-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-center">
+          {movies.map((movie, index) => (
+            <div key={index} className="group hover:border-red-800  border-[3px] border-gray-300 rounded w-full cursor-pointer relative overflow-hidden">
+              <img src={movie.Poster} alt={movie.Title} className="rounded-lg h-full w-full opacity-70 hover:opacity-100 filter brightness-80 transition-transform duration-300 transform group-hover:scale-105 group-hover:z-10" />
+              <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-2 text-white w-full">
+                <h2 className="text-lg font-medium">{movie.Title}</h2>
+                <p className="text-sm text-gray-400 my-3">{movie.Year}</p>
+                <Link to={`/movie/${movie.imdbID}`} className="text-white inline-block cursor-pointer font-medium py-[10px] px-[14px] rounded-full bg-[#E13C52] hover:bg-[#f46174]" > Watch Now
+                    </Link>              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

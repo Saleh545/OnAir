@@ -67,13 +67,10 @@ const Popular = () => {
             View all <FaAngleRight />
           </Link>
         </h2>
-        <div className="slider-container relative overflow-hidden">
+        <div className="slider-container relative overflow-hidden ">
           <Slider {...settings}>
             {movies.map((movie, index) => (
-              <div
-                key={index}
-                className="relative z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30"
-              >
+              <div key={index} className="relative  z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30" >
                 <img src={movie.Poster} alt={movie.Title} className="rounded-[4px] w-full h-screencard-img" />
                 <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
                   <div className="p-4 text-white">

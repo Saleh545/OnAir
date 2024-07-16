@@ -14,6 +14,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 const Footer = () => {
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <footer className="bg-[#191919] pt-[60px] flex pb-[32px]">
@@ -25,8 +29,8 @@ const Footer = () => {
         </AccordionSummary>
         <AccordionDetails className="bg-[#191919]">
         <Link className="text-[#797979] block mb-3"> Personal data</Link>
-              <Link className="text-[#797979] block mb-3">Choosing a Plan</Link>
-              <Link className="text-[#797979] block mb">Payment</Link>
+              <Link className="text-[#797979] block mb-3" to="/plans" onClick={(handleLinkClick)}>Choosing a Plan</Link>
+              <Link className="text-[#797979] block mb" to="/payments" onClick={(handleLinkClick)}>Payment</Link>
         </AccordionDetails>
       </Accordion>
       <Accordion className="bg-[#191919]">
@@ -62,7 +66,7 @@ const Footer = () => {
     </div>
           <div className="left lg:w-[26%]  w-full ">
             <div className="logo mt-[10px]">
-              <Link to="/">
+              <Link to="/" onClick={(handleLinkClick)}>
                 <img src={footerlogo} alt="" />
               </Link>
             </div>
@@ -110,8 +114,8 @@ const Footer = () => {
             <div className="card-footer">
               <h4 className="flex text-white mb-[22px] gap-[6.5px]"><img src="./src/assets/avatar.svg" alt="" />Sign in</h4>
               <Link className="text-[#797979] block mb-3"> Personal data</Link>
-              <Link to="/plans" className="text-[#797979] block mb-3">Choosing a Plan</Link>
-              <Link to="/payments" className="text-[#797979] block mb">Payment</Link>
+              <Link to="/plans" onClick={(handleLinkClick)} className="text-[#797979] block mb-3">Choosing a Plan</Link>
+              <Link to="/payments" onClick={(handleLinkClick)} className="text-[#797979] block mb">Payment</Link>
             </div>
 
             <div className="card-footer">

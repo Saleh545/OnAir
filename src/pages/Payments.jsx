@@ -20,7 +20,7 @@ const Payments = () => {
   return (
     <div>
       <Header />
-      <div className="flex bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>
+      <div className=" block lg:flex  bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>
         <Sidebar />
         <div className="ml-[50px] min-h-screen mt-[28px] w-full flex">
           <div className="container xl:px-14 px-3 flex-1">
