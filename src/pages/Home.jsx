@@ -22,12 +22,35 @@ const Home = () => {
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1280, // tablet ekranı için
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768, // telefon ekranı için
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // daha küçük telefon ekranları için
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div>
       <Spinner/>
 <Header/>
-    <div className="relative  ">
+    <div className="relative  overflow-hidden ">
       <Slider {...settings}>
         <div className="relative"  >
           <img src={homebck} alt="" className="z-10" />

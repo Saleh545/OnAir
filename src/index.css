@@ -9,7 +9,6 @@ body {
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    overflow-x: hidden !important;
     backdrop-filter: blur(30px) ;
     background: rgb(35 30 30);
 }
@@ -145,10 +144,6 @@ footer a:hover{
   .profile-left .active{
     background-color: #E13C52;
   }
-
-
-
-
 
   .preloader {
     background-color: #f7f7f7;

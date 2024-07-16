@@ -68,7 +68,7 @@ const Games = () => {
             View all <FaAngleRight />
           </Link>
         </h2>
-        <div className="slider-container relative">
+        <div className="slider-container relative overflow-hidden">
           <Slider {...settings}>
             {movies.map((movie, index) => (
               <div
