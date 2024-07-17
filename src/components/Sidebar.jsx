@@ -28,7 +28,7 @@ const Sidebar = () => {
     <>
       <div className="min-h-screen  inline lg:flex border-r border-[#616161]" >
         <div className="container xl:px-14 px-3">
-          <div className="left  mt-[28px]  block lg:inline-flex flex-col justify-center">
+          <div className="left  pt-[28px]  block lg:inline-flex flex-col justify-center">
             <div className="person flex flex-col items-center">
               <img src={personImage}alt="Person"className="inline object-cover max-w-[140px] rounded-full max-h-[140px]"style={{ objectFit: "cover", width: "140px", height: "140px" }}/>
               <p className="text-[#929090] mt-[10px]">Syusifzade545@gmail.com</p>

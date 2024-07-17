@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import { Cookies } from "react-cookie";
 
 const Login = () => {
-  
+  const cookie = new Cookies()
+
+
+  cookie.set("saleh", "kitablar cox uzundular")
   return (
     <>
           <Spinner/>
@@ -22,7 +26,9 @@ const Login = () => {
               <input type="text" placeholder="Password" className="block w-[300px] mt-[11px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
               <button type="submit" className="text-white px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full bg-[#E13C52] mt-[70px] hover:bg-[#f46174]">Sign in</button>
             </form>
-            <Link className="text-[#838199]" to="/signup">Forgot password?</Link>
+            <Link className="text-[#838199]" >Forgot password?</Link>
+            <Link className="text-[#838199] mt-4" to="/signup">Don't you have an account??</Link>
+
           </div>
           <div className="mt-6 flex justify-center">
             <Link to="/" className="text-[24px] text-white">Back to website</Link>

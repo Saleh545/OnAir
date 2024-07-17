@@ -101,7 +101,7 @@
                       <div className="mt-[28px] w-[200px]">
                         <img src={freemium} alt="" />
                       </div>
-                      <p className="text-[26px]">
+                      <p className="text-[26px] mt-3">
                         Watch {selectedPlan.channels} live TV channels
                       </p>
                       <p className="text-20px text-[#FFFFFF8A]">
