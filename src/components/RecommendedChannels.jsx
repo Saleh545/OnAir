@@ -58,9 +58,9 @@ const RecommendedChannels = () => {
     <div className="mt-[69px] relative z-0">
       <div className="container xl:px-14 px-3 relative">
       
-        <h2 className="text-[32px] flex items-center font-normal leading-9 text-white inline">
+        <h2 className="text-[20px] lg:text-[32px] flex items-center font-normal leading-9 text-white inline">
           Recommended Channels
-          <Link to="/all-movies" className="underline hover:no-underline text-[16px] ml-[63px] flex items-center gap-[26px]">
+          <Link to="/all-movies" className="underline  hover:no-underline text-[16px] ml-[63px] flex items-center gap-[26px]">
             View all <FaAngleRight />
           </Link>
         </h2>

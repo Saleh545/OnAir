@@ -26,7 +26,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="min-h-screen  flex border-r border-[#616161]" >
+      <div className="min-h-screen  inline lg:flex border-r border-[#616161]" >
         <div className="container xl:px-14 px-3">
           <div className="left  mt-[28px]  block lg:inline-flex flex-col justify-center">
             <div className="person flex flex-col items-center">

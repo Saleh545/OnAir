@@ -20,9 +20,9 @@ const Payments = () => {
   return (
     <div>
       <Header />
-      <div className=" block lg:flex  bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>
+      <div className="block lg:flex bg-center bg-cover" style={{ backgroundImage: `url(${moviebck})` }}>
         <Sidebar />
-        <div className="ml-[50px] min-h-screen mt-[28px] w-full flex">
+        <div className="lg:ml-[50px] m-0 min-h-screen mt-[28px] w-full flex justify-center">
           <div className="container xl:px-14 px-3 flex-1">
             <h2 className="items-center gap-[24px] flex text-[32px] font-bold text-white">
               <IoNewspaperOutline /> Payments history
@@ -31,19 +31,19 @@ const Payments = () => {
               <table className="min-w-full bg-transparent text-white rounded-lg">
                 <thead>
                   <tr className="border-b border-gray-700">
-                    <th className="px-6 py-3 text-left text-[20px] font-medium text-[#838199]  tracking-wider">Number</th>
-                    <th className="px-6 py-3 text-left text-[20px] font-medium text-[#838199] tracking-wider">Date</th>
-                    <th className="px-6 py-3 text-left text-[20px] font-medium text-[#838199] tracking-wider">Total</th>
-                    <th className="px-6 py-3 text-left text-[20px] font-medium text-[#838199] tracking-wider">View</th>
+                    <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Number</th>
+                    <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Date</th>
+                    <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Total</th>
+                    <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">View</th>
                   </tr>
                 </thead>
                 <tbody>
                   {payments.map((payment) => (
                     <tr key={payment.number} className="border-b border-[#616161] cursor-pointer hover:bg-[#444242]">
-                      <td className="px-6 py-4 whitespace-nowrap text-[20px]">{payment.number}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-[20px]">{payment.date}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-[20px]">{payment.total}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-[20px] text-red-500 cursor-pointer">view</td>
+                      <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.number}</td>
+                      <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.date}</td>
+                      <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.total}</td>
+                      <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px] text-red-500 cursor-pointer">view</td>
                     </tr>
                   ))}
                 </tbody>
