@@ -212,6 +212,9 @@ footer a:hover{
 .preloader .preloader-img img {
     max-width: 55px;
 }
+.css-1c99szj-MuiRating-icon {
+  color: white !important;
+}
 @keyframes zoom {
     0% {
         -webkit-transform: rotate(0deg);

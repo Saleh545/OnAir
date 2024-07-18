@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import { FaEyeSlash, FaImdb, FaInstagram, FaPlus, FaStar, FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaEyeSlash,  FaInstagram, FaPlus,  FaTelegramPlane, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { SiImdb } from "react-icons/si";
 import moviebck from "../assets/moviebck.svg";
-import { CiStar } from "react-icons/ci";
 import { IoMdShare } from "react-icons/io";
 import Popular from "./Popular";
 import Spinner from "./Spinner";
+import { Box, Rating, } from "@mui/material";
 
 
 const API_URL = (imdbID) => {
@@ -19,6 +19,7 @@ const MovieDetail = () => {
   const { imdbID } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [value, setValue] = useState();
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -76,12 +77,10 @@ const MovieDetail = () => {
         <div className=" mt-[20px]  ">
             <h3 className="text-white ">Rate this film!</h3>
             <div className="flex justify-center gap-3 bg-[#18181B] py-[16px] inline px-[8px] rounded-xl  mt-[20px]">
-        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
-        <FaStar className="hover:text-yellow-400 text-white cursor-pointer w-6 h-6"/>
-
+    
+            <Box sx={{'& > legend': { mt: 2 },}}>
+      <Rating name="simple-controlled" className="text-white" value={value} onChange={(event, newValue) => { setValue(newValue); }} />  
+    </Box>
             </div>
 
         </div>
