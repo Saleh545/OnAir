@@ -37,23 +37,21 @@ const SignUp = () => {
     setError(null);
 
     try {
-      const existingUser = await axios.get("http://localhost:3000/users", {
+      const response = await axios.get("http://localhost:3000/users", {
         params: {
           email: formData.email,
           phone: formData.phone
         }
       });
 
-      if (existingUser.data.length > 0) {
+      if (response.data.length > 0) {
         setError("A user with this email or phone number already exists");
         return;
       }
 
       // Kullanıcıyı kaydet
-      const response = await axios.post("http://localhost:3000/users", formData);
-      console.log(response.data);
-      // Başarılı bir şekilde kayıt olundu, ana sayfaya yönlendirme yap
-      navigate("/");
+      await axios.post("http://localhost:3000/users", formData);
+      navigate("/login");
     } catch (error) {
       console.error("Error creating account:", error);
       setError("An error occurred while creating the account");
@@ -65,17 +63,15 @@ const SignUp = () => {
   return (
     <>
       {loading && <Spinner />}
-      <div className="w-full min-h-screen flex items-center justify-center flex-col" style={{ backgroundImage: "url('./src/assets/login.svg')", backgroundPosition: "center" }}>
+      <div className="w-full min-h-screen pt-8 flex items-center justify-center flex-col" style={{ backgroundImage: "url('./src/assets/login.svg')", backgroundPosition: "center" }}>
         <div className="container max-w-screen-lg mx-auto flex items-center justify-center my-[40px] flex-col">
           <div className="logo flex justify-center mb-6">
             <Link to="/" className="inline-block">
               <img src={onair} alt="On Air" />
             </Link>
           </div>
-          <div className="login-box rounded-[23px] flex flex-col items-center justify-center bg-[#00000099] pt-[26px] px-[95px] pb-[50px] mx-[25px]">
-            <h2 className="text-[24px] text-white text-center">
-              Login to get started
-            </h2>
+          <div className="login-box rounded-[23px] flex flex-col items-center justify-center bg-[#00000099] pt-[26px] px-[95px]  mx-[25px]">
+            <h2 className="text-[24px] text-white text-center">Sign Up</h2>
 
             <form onSubmit={handleSubmit} className="mt-[22px] mb-[37px] flex flex-col items-center justify-center">
               <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="block w-[300px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
@@ -93,7 +89,7 @@ const SignUp = () => {
                 </p>
               </label>
 
-              <button type="submit" className={`text-white flex flex-col items-center justify-center px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full mt-[34px] ${ isTermsAccepted ? "bg-[#E13C52] hover:bg-[#f46174]" : "bg-gray-500 cursor-not-allowed" }`} disabled={!isTermsAccepted}>Register</button>
+              <button type="submit" className={`text-white flex flex-col items-center justify-center px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full mt-[34px] ${isTermsAccepted ? "bg-[#E13C52] hover:bg-[#f46174]" : "bg-gray-500 cursor-not-allowed"}`} disabled={!isTermsAccepted}>Register</button>
             </form>
             {error && <p className="text-red-500">{error}</p>}
           </div>
