@@ -11,7 +11,7 @@ const Games = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(          `https://www.omdbapi.com/?s=game&type=movie&apikey=73a748a5`
+        const response = await fetch(`https://www.omdbapi.com/?s=game&type=movie&apikey=73a748a5`
       );
         const data = await response.json();
         if (data.Search) {

@@ -1,9 +1,8 @@
-// src/Movies.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const api_key = '891f350749590453ec1820b27668b67d';
-const movie_id = '551'; // Örnek olarak Fight Club (ID: 550)
+const movie_id = '551';
 
 const Moviess = () => {
   const [images, setImages] = useState([]);
@@ -12,13 +11,11 @@ const Moviess = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fotoğraflar (Images) API çağrısı
         const imagesResponse = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/images`, {
           params: { api_key },
         });
         setImages(imagesResponse.data.backdrops);
 
-        // Videolar (Videos) API çağrısı
         const videosResponse = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/videos`, {
           params: { api_key },
         });

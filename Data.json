@@ -6,6 +6,14 @@
       "email": "saleh545@gmail.com",
       "password": "saleh545",
       "id": "4bda"
+    },
+    {
+      "id": "d667",
+      "name": "Tamerlan",
+      "phone": "0509999999",
+      "email": "tamerlan@gmail.com",
+      "password": "sss",
+      "confirmPassword": "sss"
     }
   ]
 }

@@ -48,7 +48,6 @@ const MovieDetail = () => {
 
   
   
-  
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
@@ -63,14 +62,14 @@ const MovieDetail = () => {
         
         if (!movieResponse.data.movie_results || movieResponse.data.movie_results.length === 0) {
           console.error('No movie results found for imdbID:', imdbID);
-          setMovie(null); // Film bulunamadığında movie state'ini null yap
+          setMovie(null); 
           return;
         }
         
         const movieID = movieResponse.data.movie_results[0]?.id;
         if (!movieID) {
           console.error('Movie ID not found for imdbID:', imdbID);
-          setMovie(null); // movieID bulunamadığında movie state'ini null yap
+          setMovie(null); 
           return;
         }
       
@@ -79,7 +78,7 @@ const MovieDetail = () => {
       
         if (!movieInfoResponse.data) {
           console.error('No movie info found for movieID:', movieID);
-          setMovie(null); // Film bilgisi bulunamadığında movie state'ini null yap
+          setMovie(null); 
           return;
         }
         
@@ -93,7 +92,7 @@ const MovieDetail = () => {
         setVideos(videosResponse.data.results);
       } catch (error) {
         console.error('Error fetching data:', error);
-        setMovie(null); // Hata durumunda movie state'ini null yap
+        setMovie(null); 
       } finally {
         setLoading(false);
       }

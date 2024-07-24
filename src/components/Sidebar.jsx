@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import moviebck from "../assets/moviebck.svg";
 import defaultPersonImage from "../assets/profile.png";
 import { FaPencil } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
-import avatar from "../assets/avatar.svg";
+import {  NavLink } from "react-router-dom";
 import { IoIosList } from "react-icons/io";
 import { IoNewspaperOutline } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 
 const Sidebar = () => {
@@ -40,7 +37,8 @@ const Sidebar = () => {
               <p className="text-[18px] font-[700] text-white">02.08.2003</p>
             </div>
             <div className="mt-[20px] profile-left">
-                <NavLink to="/profile" className="flex items-center rounded-[60px] pt-[10px] pb-[14px] pl-[21px] pr-[24px] items-center gap-[26px] text-[18px] text-white" ><img src={avatar} alt="" />Profile</NavLink>
+                <NavLink to="/profile" className="flex items-center rounded-[60px] pt-[10px] pb-[14px] pl-[21px] pr-[24px] items-center gap-[26px] text-[18px] text-white" ><CgProfile />
+Profile</NavLink>
                 <NavLink to="/plans" className="flex rounded-[60px] pt-[10px] pb-[14px] pl-[21px] pr-[24px] mt-[28px] items-center gap-[26px] text-[18px] text-white"><IoIosList />Plans</NavLink>
                 <NavLink to="/payments" className="flex rounded-[60px] pt-[10px] pb-[14px] pl-[21px] pr-[24px] mt-[28px] items-center gap-[26px] text-[18px] text-white"><IoNewspaperOutline />Payments</NavLink>
             </div>

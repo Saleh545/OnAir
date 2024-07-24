@@ -105,7 +105,7 @@ const Footer = () => {
             </div>
             <div className="text-bottom">
               <p className="text-[#616161]">
-                Copyright © 2022 Hot Baku. All rights reserved.
+                Copyright © 2024  Baku. All rights reserved.
               </p>
             </div>
           </div>

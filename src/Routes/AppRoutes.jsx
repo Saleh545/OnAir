@@ -23,7 +23,6 @@ const AppRoutes = () => {
         <Route path="/payments" element={< Payments />}/>
         <Route path="/movie/:imdbID" element={<MovieDetail/>} />
         <Route path="/all-movies"  element={<AllMovies/>} />
-
       </Routes>
     </>
   );
