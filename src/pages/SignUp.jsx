@@ -91,7 +91,8 @@ const SignUp = () => {
 
               <button type="submit" className={`text-white flex flex-col items-center justify-center px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full mt-[34px] ${isTermsAccepted ? "bg-[#E13C52] hover:bg-[#f46174]" : "bg-gray-500 cursor-not-allowed"}`} disabled={!isTermsAccepted}>Register</button>
             </form>
-            {error && <p className="text-red-500">{error}</p>}
+            <p  className="text-[#838199] hover:text-white mb-4">Do you have an account? Login</p>
+            {error && <p className="text-red-500 mb-4">{error}</p>}
           </div>
           <div className="mt-6 flex justify-center">
             <Link to="/" className="text-[24px] text-white">Back to website</Link>

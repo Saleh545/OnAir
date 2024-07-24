@@ -102,16 +102,7 @@ const RecommendedChannels = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="absolute text-center bottom-0 right-0 bg-[#D9D9D9] mb-[27px] rounded-[18px_0px_0px_18px] z-50">
-                  <img
-                    className="mt-[14px] h-[31px] mb-[11px] mx-[14px]"
-                    src="./src/assets/fox.svg"
-                    alt=""
-                  />
-                  <p className="bg-[#515151] w-full rounded-[18px_0px_0px_18px] py-[5px] px-[14px] text-2xl text-white">
-                    {movie.Year}
-                  </p>
-                </div>
+             
               </div>
             ))}
           </Slider>

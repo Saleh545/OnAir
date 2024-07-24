@@ -11,7 +11,7 @@ const Popular = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch(`https://www.omdbapi.com/?s=pop&apikey=73a748a5`);
+        const response = await fetch(`https://www.omdbapi.com/?s=popular&apikey=73a748a5`);
         const data = await response.json();
         if (data.Search) {
           setMovies(data.Search);
@@ -71,7 +71,7 @@ const Popular = () => {
           <Slider {...settings}>
             {movies.map((movie, index) => (
               <div key={index} className="relative  z-50 mt-[54px] mb-[30px] mr-8 cursor-pointer rounded-[4px] w-[231px!important]  h-[348px!important] custom-slide transition-all duration-300 group z-30" >
-                <img src={movie.Poster} alt={movie.Title} className="rounded-[4px] w-full h-screencard-img" />
+                <img src={movie.Poster} alt={movie.Title} className="rounded-[4px] w-full h-full" />
                 <div className="absolute bottom-0 left-0 w-full h-[178px] bg-black bg-opacity-0 group-hover:bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
                   <div className="p-4 text-white">
                     <h2 className="mb-2 text-[16px]">{movie.Title}</h2>

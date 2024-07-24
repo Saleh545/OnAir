@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -61,6 +61,8 @@ const API_URL = (search) => {
 const Search = ({ onSubmit }) => {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
+  const [showResults, setShowResults] = useState(false);
+  const searchResultsRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,8 +73,19 @@ const Search = ({ onSubmit }) => {
       }
       const data = await response.json();
       setMovies(data.Search || []);
+      setShowResults(true);
     } catch (error) {
       console.error("Error fetching search results:", error);
+    }
+  };
+
+  const handleFocus = () => {
+    setShowResults(true);
+  };
+
+  const handleBlur = (e) => {
+    if (!searchResultsRef.current.contains(e.relatedTarget)) {
+      setShowResults(false);
     }
   };
 
@@ -89,24 +102,39 @@ const Search = ({ onSubmit }) => {
                 placeholder="Ara..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
               />
             </form>
           </SearchApp>
         </Toolbar>
       </AppBar>
-      {movies.length > 0 && (
-        <div className="search-results absolute right-10px bg-[#1c1c1c] p-3 lg:top-[100px] z-20 top-[48px] ">
+      {showResults && movies.length > 0 && (
+        <div
+          ref={searchResultsRef}
+          className="search-results absolute right-10px bg-[#1c1c1c] p-3 lg:top-[100px] z-20 top-[48px]"
+        >
           <h3 className="text-white text-[24px] font-bold text-center">Search Results:</h3>
-          <ul>{movies.map((movie) => (
+          <ul>
+            {movies.map((movie) => (
               <li key={movie.imdbID} className="mt-3 hover:bg-[#3c3b3b]">
-                <Link className="text-white flex items-center" to={`/movie/${movie.imdbID}`} >
-                  {movie.Poster !== "N/A" ? (
-                    <img src={movie.Poster} alt={movie.Title} className="w-10 h-auto mr-2" />
-                  ) : (
-                    <div className="w-10 h-auto mr-2">Poster not available</div>
-                  )}
-                  <span>{movie.Title}</span>
-                </Link>
+            <Link
+  className="text-white flex items-center"
+  to={`/movie/${movie.imdbID}`}
+  onClick={() => setShowResults(false)}
+>
+  {movie.Poster !== "N/A" ? (
+    <img
+      src={movie.Poster}
+      alt={movie.Title}
+      className="w-10 h-auto mr-2"
+    />
+  ) : (
+    <div className="w-10 h-auto mr-2">Poster not available</div>
+  )}
+  <span>{movie.Title}</span>
+</Link>
+
               </li>
             ))}
           </ul>
