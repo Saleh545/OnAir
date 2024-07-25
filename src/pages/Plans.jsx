@@ -36,6 +36,12 @@
   ];
 
   const Plans = () => {
+    const [selectedPlanId, setSelectedPlanId] = useState(null);
+  
+    const handlePlanClick = (plan) => {
+      setSelectedPlanId(plan.id);
+      handlePlanSelect(plan);
+    };
     const [selectedPlan, setSelectedPlan] = useState(null);
     const [cart, setCart] = useState([]);
 
@@ -66,33 +72,29 @@
                 <img src={avatar} alt="" />
                 Plans
               </h2>
-              <div className="lg:w-full w-full mt-[28px]">
-                {plans.map((plan) => (
-                  <div
-                    key={plan.id}
-                    className="flex cursor-pointer items-center justify-between bg-[#000000] hover:bg-[#444242] rounded-[20px] px-[38px] py-[14px] mt-[10px]"
-                    onClick={() => handlePlanSelect(plan)}
-                  >
-                    <h4 className="text-white text-[26px]">{plan.name}</h4>
-                    <p className="text-white text-[26px]">{`$${plan.price}`}</p>
-                  </div>
-                ))}
-              </div>
+             
               <div className="my-[35px] overflow-hidden bg-[#000000] rounded-[20px] pt-[14px] pb-[30px] pl-[38px] ">
                 <div>
                   <h5 className="text-[26px] text-white">Upgrade your service</h5>
                   <div className="bg-[#7A7A7A] hidden lg:inline-flex rounded-2xl mt-[45px] ">
-                    {plans.map((plan) => (
-                      <div key={plan.id}
-                        className="flex cursor-pointer items-center justify-between rounded-[20px] px-[38px] py-[5px]"
-                        onClick={() => handlePlanSelect(plan)}
-                      >
-                        <h4 className="text-[#D9D9D9] text-[14px]">
-                          {plan.name}
-                        </h4>
-                      </div>
-                    ))}
-                  </div>
+      {plans.map((plan) => (
+        <div
+          key={plan.id}
+          className={`flex cursor-pointer items-center justify-between rounded-[20px] px-[38px] py-[5px] ${
+            selectedPlanId === plan.id ? 'bg-[#E13C52]' : 'bg-transparent'
+          }`}
+          onClick={() => handlePlanClick(plan)}
+        >
+          <h4
+            className={`text-[#D9D9D9] text-[14px] ${
+              selectedPlanId === plan.id ? 'text-white' : ''
+            }`}
+          >
+            {plan.name}
+          </h4>
+        </div>
+      ))}
+    </div>
                 </div>
 
                 <div className="lg:flex block justify-end lg:p-0 px-4">
@@ -107,7 +109,7 @@
                       <p className="text-20px text-[#FFFFFF8A]">
                         {selectedPlan.description}
                       </p>
-                      <div className="lg:flex block items-end lg:items-center mt-[20px]">
+                      <div className="lg:flex block items-end lg:items-center mt-[20px] mr-[10px]">
                         <div className="bg-[#E8E8E8] rounded-[20px] p-[10px] pb-0 w-full h-full">
                           <img
                             className="lg:max-w-none h-full"
@@ -121,7 +123,8 @@
                               ${selectedPlan.price}
                             </p>
                             <button
-                              className="bg-red-500 flex rounded-[60px] px-[15px] py-[10px] mt-2 rounded-[60px]"
+                              className="bg-[#E13C52] hover:bg-[#f46174] flex rounded-[60px] px-[15px] py-[10px] mt-2 rounded-[60px]"
+                              
                               onClick={handleAddToCart}
                             >
                               Add to Cart
@@ -138,7 +141,7 @@
                         Your service
                       </h2>
                       {cart.length === 0 ? (
-                        <p>Your cart is empty</p>
+                        <p className="my-[18px]">Your cart is empty</p>
                       ) : (
                         <ul>
                           {cart.map((plan) => (

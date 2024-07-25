@@ -13,6 +13,8 @@ const Movies = () => {
       try {
         const response = await fetch(`https://www.omdbapi.com/?s=comedy&apikey=73a748a5`);
         const data = await response.json();
+        console.log('API Response:', data);
+
         if (data.Search) {
           setMovies(data.Search);
         } else {

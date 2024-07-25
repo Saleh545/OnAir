@@ -85,7 +85,9 @@ const MovieDetail = () => {
         setMovie(movieInfoResponse.data);
         const imagesResponse = await axios.get(TMDB_API_URL(movieID, 'images'));
         console.log('Images Response:', imagesResponse.data);
-        setImages(imagesResponse.data.backdrops);
+        
+        // Limit to the first 12 images
+        setImages(imagesResponse.data.backdrops.slice(0, 12));
       
         const videosResponse = await axios.get(TMDB_API_URL(movieID, 'videos'));
         console.log('Videos Response:', videosResponse.data);
@@ -97,6 +99,7 @@ const MovieDetail = () => {
         setLoading(false);
       }
     };
+    
     
     
     fetchMovieDetails();
@@ -142,7 +145,7 @@ const MovieDetail = () => {
                   <h4 className="text-white text-[24px]">{movie.title} Movie Information</h4>
                   <p className="text-[#D4D4D8] font-bold mt-[32px] text-[24px]">{movie.overview}</p>
                   <p className="text-white my-[14px] font-bold">Director: <span className="text-[#A1A1AA]">N/A</span></p>
-                  <p className="text-white font-bold">Actors: <span className="text-[#A1A1AA]">N/A</span></p>
+                  <p className="text-white font-bold">Release date: <span className="text-[#A1A1AA]">{movie.release_date}</span></p>
                   <p className="text-white font-bold my-[14px]">Genre: <span className="text-[#A1A1AA]">{movie.genres.map(genre => genre.name).join(', ')}</span></p>
                   <p className="text-white font-bold flex items-center text-yellow-400 gap-3">
                     <SiImdb className="w-[30px] h-[30px]" /> Rating: {movie.vote_average}

@@ -34,7 +34,6 @@ const Payments = () => {
                     <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Number</th>
                     <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Date</th>
                     <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">Total</th>
-                    <th className="px-4 lg:px-6 py-3 text-left text-[16px] lg:text-[20px] font-medium text-[#838199] tracking-wider">View</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -43,7 +42,6 @@ const Payments = () => {
                       <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.number}</td>
                       <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.date}</td>
                       <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px]">{payment.total}</td>
-                      <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-[16px] lg:text-[20px] text-red-500 cursor-pointer">view</td>
                     </tr>
                   ))}
                 </tbody>

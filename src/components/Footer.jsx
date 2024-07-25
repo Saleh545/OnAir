@@ -77,24 +77,24 @@ const Footer = () => {
               </p>
             </div>
             <div className="app flex my-[32px] gap-[20px]">
-              <Link to="https://www.apple.com/">
+              <Link to="https://www.apple.com/" target="blank">
                 <img src={store} alt="" />
               </Link>
-              <Link  to="https://www.play.google.com/">
+              <Link  to="https://www.play.google.com/" target="blank">
                 <img src={play} alt="" />
               </Link>
             </div>
             <div className="social flex items-center gap-[40px] mb-[54px]">
-              <Link to="https://www.facebook.com/" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
+              <Link to="https://www.facebook.com/" target="blank" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
                 <FaFacebookSquare className="w-[17px]" />
               </Link>
-              <Link to="https://www.instagram.com/" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
+              <Link to="https://www.instagram.com/" target="blank" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
                 <TiSocialInstagram className="" />
               </Link>
-              <Link to="https://www.x.com/" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
+              <Link to="https://www.x.com/" target="blank" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
                 <FaTwitter />
               </Link>
-              <Link to="https://www.youtube.com/" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
+              <Link to="https://www.youtube.com/" target="blank" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
                 <IoLogoYoutube />
               </Link>
             </div>
