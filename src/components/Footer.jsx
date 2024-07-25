@@ -65,7 +65,7 @@ const Footer = () => {
       </Accordion>
     </div>
           <div className="left lg:w-[26%]  w-full ">
-            <div className="logo mt-[10px]">
+            <div className="logo mt-[10px] flex justify-center lg:justify-start">
               <Link to="/" onClick={(handleLinkClick)}>
                 <img src={footerlogo} alt="" />
               </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
                 Everything you want to watch, anytime, anywhere and as much.
               </p>
             </div>
-            <div className="app flex my-[32px] gap-[20px]">
+            <div className="app flex my-[32px] gap-[20px] items-center justify-center lg:justify-start">
               <Link to="https://www.apple.com/" target="blank">
                 <img src={store} alt="" />
               </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
                 <img src={play} alt="" />
               </Link>
             </div>
-            <div className="social flex items-center gap-[40px] mb-[54px]">
+            <div className="social flex items-center gap-[40px] mb-[54px]  justify-center lg:justify-start ">
               <Link to="https://www.facebook.com/" target="blank" className="border rounded-full p-[12px] border-[#363636] hover:text-[#55ACE3] hover:border-[#55ACE3] text-white">
                 <FaFacebookSquare className="w-[17px]" />
               </Link>
@@ -98,13 +98,13 @@ const Footer = () => {
                 <IoLogoYoutube />
               </Link>
             </div>
-            <div className="terms flex gap-3 mb-[13px]">
+            <div className="terms flex gap-3 mb-[13px]  justify-center lg:justify-start">
               <Link className="text-[#616161]">Terms of use</Link>
               <Link className="text-[#616161]">Privacy Policy</Link>
               <Link className="text-[#616161]">SiteMap</Link>
             </div>
             <div className="text-bottom">
-              <p className="text-[#616161]">
+              <p className="text-[#616161] flex justify-center lg:justify-start">
                 Copyright © 2024  Baku. All rights reserved.
               </p>
             </div>
