@@ -22,28 +22,31 @@ const Home = () => {
   let settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000, // 1 saniye
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    pauseOnHover: true, 
     responsive: [
       {
-        breakpoint: 1280, // tablet ekranı için
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 768, // telefon ekranı için
+        breakpoint: 1280, 
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // daha küçük telefon ekranları için
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -80,12 +83,12 @@ Watch now        </Link>
     <div className="relative h-screen flex items-center justify-center">
       <img src={film3} alt="" className="z-10 w-full h-full object-cover" />
       <div className="absolute inset-0 flex justify-center items-center flex-col lg:w-[35%] sm:w-[100%] md:w-[55%] px-9 sm:mt-5 mt-5 w-full font-light">
-        <h2 className="z-40 text-white text-center lg:text-5xl text-[30px] md:text-[35px] sm:text-[35px]">
-          Dive into a <span className="font-bold">universe</span> of un-ending content and channels
-        </h2>
-        <p className="text-white px-[34px] cursor-pointer lg:text-2xl md:text-[20px] sm:text-[20px] font-medium py-[10px] rounded-full bg-[#E13C52] lg:mt-[70px] md:mt-[40px] sm:mt-[15px] hover:bg-[#f46174] mt-5">
-          Start FREE trial
-        </p>
+        <h2 className="z-40 text-white font-bold text-center lg:text-5xl text-[30px] md:text-[35px] sm:text-[35px]">
+        When a sadistic serial killer begins murdering key political figures in Gotham, The Batman is forced.
+
+</h2>
+        <Link to="http://localhost:5173/movie/tt0372784" className="text-white px-[34px] cursor-pointer lg:text-2xl md:text-[20px] sm:text-[20px] font-medium py-[10px] rounded-full bg-[#E13C52] lg:mt-[70px] md:mt-[40px] sm:mt-[15px] hover:bg-[#f46174] mt-5">
+Watch now        </Link>
       </div>
     </div>
     <div className="relative h-screen flex items-center justify-center">
