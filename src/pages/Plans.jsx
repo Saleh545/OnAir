@@ -76,22 +76,10 @@
               <div className="my-[35px] overflow-hidden bg-[#000000] rounded-[20px] pt-[14px] pb-[30px] pl-[38px] ">
                 <div>
                   <h5 className="text-[26px] text-white">Upgrade your service</h5>
-                  <div className="bg-[#7A7A7A] hidden lg:inline-flex rounded-2xl mt-[45px] ">
+                  <div className="bg-[#7A7A7A] block lg:inline-flex rounded-2xl mt-[45px] ">
       {plans.map((plan) => (
-        <div
-          key={plan.id}
-          className={`flex cursor-pointer items-center justify-between rounded-[20px] px-[38px] py-[5px] ${
-            selectedPlanId === plan.id ? 'bg-[#E13C52]' : 'bg-transparent'
-          }`}
-          onClick={() => handlePlanClick(plan)}
-        >
-          <h4
-            className={`text-[#D9D9D9] text-[14px] ${
-              selectedPlanId === plan.id ? 'text-white' : ''
-            }`}
-          >
-            {plan.name}
-          </h4>
+        <div key={plan.id} className={`flex cursor-pointer items-center justify-between rounded-[20px] px-[38px] py-[5px] ${ selectedPlanId === plan.id ? 'bg-[#E13C52]' : 'bg-transparent' }`}onClick={() => handlePlanClick(plan)}>
+          <h4 className={`text-[#D9D9D9] py-2 text-[14px] ${ selectedPlanId === plan.id ? 'text-white' : '' }`} >{plan.name}</h4>
         </div>
       ))}
     </div>

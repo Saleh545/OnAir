@@ -7,8 +7,8 @@ import Series from "../pages/Series";
 import Profile from "../pages/Profile";
 import Plans from "../pages/Plans";
 import Payments from "../pages/Payments";
-import MovieDetail from "../components/MovieDetail";
 import AllMovies from "../pages/AllMovies";
+import MovieDetail from "../pages/MovieDetail";
 
 const AppRoutes = () => {
   return (

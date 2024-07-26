@@ -20,7 +20,6 @@ const Login = () => {
     try {
       const response = await axios.get("http://localhost:3000/users");
       const users = response.data;
-
       const user = users.find((user) => user.email === email && user.password === password);
 
       if (user) {
@@ -42,9 +41,7 @@ const Login = () => {
       <div className="w-full min-h-screen flex items-center justify-center flex-col" style={{ backgroundImage: "url('./src/assets/login.svg')", backgroundPosition: "center" }}>
         <div className="container max-w-screen-lg mx-auto flex items-center justify-center flex-col">
           <div className="logo flex justify-center mb-6">
-            <Link to="/" className="inline-block">
-              <img src={onair} alt="On Air" />
-            </Link>
+            <Link to="/" className="inline-block"> <img src={onair} alt="On Air" /> </Link>
           </div>
           <div className="login-box rounded-[23px] flex flex-col items-center justify-center bg-[#00000099] pt-[26px] px-[95px] pb-[50px] mx-[25px]">
             <h2 className="text-[24px] text-white text-center">Login to get started</h2>

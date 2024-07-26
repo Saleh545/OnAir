@@ -49,7 +49,6 @@ const SignUp = () => {
         return;
       }
 
-      // Kullanıcıyı kaydet
       await axios.post("http://localhost:3000/users", formData);
       navigate("/login");
     } catch (error) {
@@ -66,13 +65,10 @@ const SignUp = () => {
       <div className="w-full min-h-screen pt-8 flex items-center justify-center flex-col" style={{ backgroundImage: "url('./src/assets/login.svg')", backgroundPosition: "center" }}>
         <div className="container max-w-screen-lg mx-auto flex items-center justify-center my-[40px] flex-col">
           <div className="logo flex justify-center mb-6">
-            <Link to="/" className="inline-block">
-              <img src={onair} alt="On Air" />
-            </Link>
+            <Link to="/" className="inline-block"><img src={onair} alt="On Air" /></Link>
           </div>
           <div className="login-box rounded-[23px] flex flex-col items-center justify-center bg-[#00000099] pt-[26px] px-[95px]  mx-[25px]">
             <h2 className="text-[24px] text-white text-center">Sign Up</h2>
-
             <form onSubmit={handleSubmit} className="mt-[22px] mb-[37px] flex flex-col items-center justify-center">
               <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} className="block w-[300px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
               <input type="tel" name="phone" placeholder="Phone number" value={formData.phone} onChange={handleChange} className="block w-[300px] mt-[11px] bg-[#313131E6] outline-none py-[10px] pl-[21px] text-white" />
@@ -83,13 +79,12 @@ const SignUp = () => {
                 <input type="checkbox" className="hidden" checked={isTermsAccepted} onChange={handleCheckboxChange} />
                 <span className="checkmark bg-transparent border border-gray-300 rounded w-5 h-5 inline-block relative"></span>
                 <p className="text-[#8D8D8D] text-[15px]">
-                  By Signing up, you agree to the{" "}
-                  <span className="text-[#E13C52]">Terms of Use</span> &{" "}
+                  By Signing up, you agree to the
+                  <span className="text-[#E13C52]">Terms of Use</span> &
                   <span className="text-[#E13C52]">Privacy Policy.</span>
                 </p>
               </label>
-
-              <button type="submit" className={`text-white flex flex-col items-center justify-center px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full mt-[34px] ${isTermsAccepted ? "bg-[#E13C52] hover:bg-[#f46174]" : "bg-gray-500 cursor-not-allowed"}`} disabled={!isTermsAccepted}>Register</button>
+              <button type="submit" className={`text-white flex flex-col items-center justify-center px-[34px] cursor-pointer text-2xl font-medium py-[10px] rounded-full mt-[34px] ${isTermsAccepted ? "bg-[#E13C52] hover:bg-[#f46174]" : "bg-gray-500"}`} style={{ cursor: isTermsAccepted ? 'pointer' : 'not-allowed' }} disabled={!isTermsAccepted}> Register </button>
             </form>
             <Link to="/login"  className="text-[#838199] hover:text-white mb-4">Do you have an account? Login</Link>
             {error && <p className="text-red-500 mb-4">{error}</p>}

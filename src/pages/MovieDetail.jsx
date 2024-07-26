@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import Spinner from './Spinner';
+import Header from  '../components/Header';
+import Footer from  '../components/Footer';
+import Spinner from  '../components/Spinner';
 import { Box, Rating } from '@mui/material';
 import { FaEyeSlash, FaInstagram, FaPlus, FaTelegramPlane, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { SiImdb } from 'react-icons/si';
 import moviebck from '../assets/moviebck.svg';
 import { IoMdShare } from 'react-icons/io';
-import Popular from './Popular';
+import Popular from '../components/Popular';
 
 const TMDB_API_KEY = '891f350749590453ec1820b27668b67d';
 const TMDB_API_URL = (movieID, type) => `https://api.themoviedb.org/3/movie/${movieID}/${type}?api_key=${TMDB_API_KEY}`;

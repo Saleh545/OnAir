@@ -1,19 +1,12 @@
 {
   "users": [
     {
-      "name": "saleh",
-      "phoneNumber": "0505951614",
-      "email": "saleh545@gmail.com",
-      "password": "saleh545",
-      "id": "4bda"
-    },
-    {
-      "id": "d667",
-      "name": "Tamerlan",
+      "id": "a8a7",
+      "name": "Saleh",
       "phone": "0509999999",
-      "email": "tamerlan@gmail.com",
-      "password": "sss",
-      "confirmPassword": "sss"
+      "email": "saleh@gmail.com",
+      "password": "saleh545",
+      "confirmPassword": "saleh545"
     }
   ]
 }
